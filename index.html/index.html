@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>triplexGh的个人网站</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 更新导航栏部分 -->
+<nav class="navbar">
+    <div class="nav-content">
+        <div class="logo">triplexGh</div>
+        <div class="nav-controls">
+            <button class="theme-toggle" onclick="toggleTheme()" title="切换主题">
+                <i class="fas fa-sun"></i>
+            </button>
+            <button class="lang-toggle" onclick="toggleLanguage()" title="切换语言">
+                <i class="fas fa-book"></i>
+                <span class="current-lang">中</span>
+            </button>
+            <button class="admin-toggle" onclick="openAdminLogin()" title="管理员模式">
+                <i class="fas fa-user-shield"></i>
+            </button>
+            <div class="nav-links">
+                <a href="#home" data-en="Home">首页</a>
+                <a href="#about" data-en="About">关于</a>
+                <a href="#portfolio" data-en="Portfolio">作品集</a>
+                <a href="blog.html" data-en="Blog">博客</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- 添加管理员登录弹窗 -->
+<div class="admin-modal" id="adminLoginModal">
+    <div class="admin-modal-content">
+        <h3 data-en="Admin Login">管理员登录</h3>
+        <div class="form-group">
+            <label for="adminLoginPassword" data-en="Password">密码</label>
+            <input type="password" id="adminLoginPassword" required>
+        </div>
+        <div class="form-buttons">
+            <button onclick="handleAdminLogin()" class="submit-btn" data-en="Login">登录</button>
+            <button onclick="closeAdminLogin()" class="cancel-btn" data-en="Cancel">取消</button>
+        </div>
+    </div>
+</div>
+
+    <section id="home" class="hero">
+        <div class="color-background"></div>
+        <div class="hero-content">
+            <h1 data-en="Welcome to triplexGh's Website">欢迎来到 triplexGh 的个人网站</h1>
+            <p data-en="This is where triplexGh shares ideas and works">这里是 triplexGh 分享想法和作品的地方</p>
+            <div class="dynamic-text">
+                <div class="text-item">
+                    <span class="bounce">C</span>
+                    <span class="roll">O</span>
+                    <span class="fade">D</span>
+                    <span class="bounce">I</span>
+                    <span class="roll">N</span>
+                    <span class="fade">G</span>
+                </div>
+                <div class="text-item">
+                    <span class="roll">D</span>
+                    <span class="bounce">E</span>
+                    <span class="fade">S</span>
+                    <span class="roll">I</span>
+                    <span class="bounce">G</span>
+                    <span class="fade">N</span>
+                </div>
+                <div class="text-item">
+                    <span class="fade">S</span>
+                    <span class="roll">H</span>
+                    <span class="bounce">A</span>
+                    <span class="fade">R</span>
+                    <span class="roll">E</span>
+                </div>
+                <div class="text-item">
+                    <span class="bounce">G</span>
+                    <span class="roll">R</span>
+                    <span class="fade">O</span>
+                    <span class="bounce">W</span>
+                    <span class="roll">T</span>
+                    <span class="fade">H</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2 data-en="About triplexGh">关于 triplexGh</h2>
+        <div class="about-content">
+            <div class="about-preview" data-en="As a freshman at the Communication University of China (CUC), I find myself at the beginning of an exciting journey in Electronic Information Engineering. The bustling campus life and cutting-edge facilities here have already made me feel at home in this dynamic academic environment.">
+                作为中国传媒大学（CUC）的一名新生，我正在电子信息工程领域开启一段激动人心的旅程。这里充满活力的校园生活和先进的设施已经让我在这个充满活力的学术环境中感到宾至如归。
+            </div>
+            <div class="about-full">
+                <p data-en="My fascination with technology began in my early teens when I first started tinkering with circuit boards and small electronics projects. Now, as I delve deeper into my major, I'm thrilled to be transforming that childhood curiosity into professional knowledge. The field of electronic information engineering particularly appeals to me because it sits at the intersection of hardware and software, offering countless opportunities to innovate and create solutions for real-world challenges.">
+                    我对技术的痴迷始于十几岁时，那时我第一次开始摆弄电路板和小型电子项目。现在，随着我深入专业学习，我很高兴能将童年的好奇心转化为专业知识。电子信息工程领域特别吸引我，因为它位于硬件和软件的交叉点，为解决现实世界的挑战提供了无数创新和创造的机会。
+                </p>
+                <p data-en="Life at CUC has been both challenging and rewarding. Between attending lectures on digital circuits, participating in laboratory sessions, and collaborating with classmates on projects, I'm constantly learning and growing. What excites me most about my program is the practical approach to learning – we're not just studying theories but actually applying them through hands-on experiments and real-world applications.">
+                    在中传的生活既充满挑战又令人满意。在参加数字电路讲座、实验课程和与同学合作项目之间，我不断学习和成长。最让我兴奋的是课程的实践方法——我们不仅仅是学习理论，而是通过动手实验和实际应用来应用它们。
+                </p>
+                <!-- 其他段落... -->
+            </div>
+            <button class="read-more" onclick="toggleAbout()" data-en="Read More">
+                展开阅读
+            </button>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2 data-en="@Works">@作品</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item video-item">
+                <div class="video-preview">
+                    <video loop muted>
+                        <source src="01dd03129e173809f2693619c5d8688f_raw.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <h3 data-en="Project Video 1">项目视频 1</h3>
+                <p data-en="Video demonstration of project 1">项目1视频演示</p>
+            </div>
+            <div class="portfolio-item video-item">
+                <div class="video-preview">
+                    <video loop muted>
+                        <source src="2d30f6a6d6619d51d6cd87dba58e3156.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <h3 data-en="Project Video 2">项目视频 2</h3>
+                <p data-en="Video demonstration of project 2">项目2视频演示</p>
+            </div>
+            <div class="portfolio-item video-item">
+                <div class="video-preview">
+                    <video loop muted>
+                        <source src="315466fd11a5433ff9e354df3e7c4aca.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <h3 data-en="Project Video 3">项目视频 3</h3>
+                <p data-en="Video demonstration of project 3">项目3视频演示</p>
+            </div>
+            <div class="portfolio-item video-item">
+                <div class="video-preview">
+                    <video loop muted>
+                        <source src="845570c3b035ad4e7c07f1aeed36d42b.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <h3 data-en="Project Video 4">项目视频 4</h3>
+                <p data-en="Video demonstration of project 4">项目4视频演示</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <!-- 左侧关于信息 -->
+            <div class="footer-section about-section">
+                <h3 data-en="About triplexGh">关于 triplexGh</h3>
+                <p data-en="Loves technology, focuses on creation, and shares life moments">热爱技术，专注创作，分享生活点滴</p>
+                <p class="school">
+                    <i class="fas fa-university"></i>
+                    <a href="https://www.cuc.edu.cn" target="_blank" class="school-link" data-en="Communication University of China">
+                        Communication University of China
+                    </a>
+                </p>
+            </div>
+            
+            <!-- 右侧联系方式 -->
+            <div class="footer-section contact-section">
+                <h3 data-en="Contact Information">联系方式</h3>
+                <ul>
+                    <li>
+                        <i class="far fa-envelope"></i>
+                        <a href="mailto:triplex.gh@gmail.com" class="contact-link" data-en="triplex.gh@gmail.com">
+                            triplex.gh@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fab fa-weixin"></i>
+                        <a href="weixin://dl/chat?googolhyer" class="contact-link wechat-link" data-en="WeChat: googolhyer">
+                            微信：googolhyer
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fab fa-qq"></i>
+                        <a href="tencent://message/?uin=3374084425" class="contact-link" data-en="QQ: 3374084425">
+                            QQ：3374084425
+                        </a>
+                    </li>
+                    <li><i class="fas fa-map-marker-alt"></i> 中国，北京</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.douyin.com/67949885574" target="_blank" class="social-link" data-en="Douyin">
+                <i class="fab fa-tiktok"></i>
+                <span data-en="Douyin">抖音</span>
+            </a>
+            <a href="https://twitter.com/triplex_gh" target="_blank" class="social-link" data-en="X">
+                <i class="fab fa-x-twitter"></i>
+                <span data-en="X">X</span>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <p data-en="© 2024 triplexGh. All rights reserved.">© 2024 triplexGh. 保留所有权利.</p>
+            <p class="footer-motto" data-en="Innovation • Sharing • Growth">创新 • 分享 • 成长</p>
+        </div>
+    </footer>
+
+    <!-- 添加微信二维码弹窗 -->
+    <div class="wechat-qr" id="wechatQR">
+        <div class="qr-content">
+            <img src="path/to/your/qrcode.jpg" alt="WeChat QR Code" data-en="Scan to add WeChat">
+            <p data-en="Scan QR Code to add WeChat">扫描二维码添加微信</p>
+            <button class="close-qr" onclick="closeQR()" data-en="Close">关闭</button>
+        </div>
+    </div>
+
+    <!-- 访客提交表单 -->
+    <div class="submit-form-modal" id="guestSubmitModal">
+        <div class="submit-form-content">
+            <h3 data-en="Submit Your Work">提交作品</h3>
+            <form id="guestSubmitForm" onsubmit="handleGuestSubmit(event)">
+                <div class="form-group">
+                    <label for="guestName" data-en="Your Name">您的名字</label>
+                    <input type="text" id="guestName" required>
+                </div>
+                <div class="form-group">
+                    <label for="guestEmail" data-en="Your Email">您的邮箱</label>
+                    <input type="email" id="guestEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="guestWorkTitle" data-en="Work Title">作品标题</label>
+                    <input type="text" id="guestWorkTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="guestWorkDesc" data-en="Description">作品描述</label>
+                    <textarea id="guestWorkDesc" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="guestWorkLink" data-en="Work Link">作品链接</label>
+                    <input type="url" id="guestWorkLink" placeholder="http://" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="submit-btn" data-en="Submit">提交</button>
+                    <button type="button" class="cancel-btn" onclick="closeGuestSubmitForm()" data-en="Cancel">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 管理员提交表单 -->
+    <div class="submit-form-modal" id="adminSubmitModal">
+        <div class="submit-form-content">
+            <h3 data-en="Admin Submit">管理员提交</h3>
+            <form id="adminSubmitForm" onsubmit="handleAdminSubmit(event)">
+                <div class="form-group">
+                    <label for="adminPassword" data-en="Admin Password">管理员密码</label>
+                    <input type="password" id="adminPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="adminWorkTitle" data-en="Work Title">作品标题</label>
+                    <input type="text" id="adminWorkTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="adminWorkDesc" data-en="Description">作品描述</label>
+                    <textarea id="adminWorkDesc" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="adminWorkType" data-en="Type">类型</label>
+                    <select id="adminWorkType" required>
+                        <option value="code" data-en="Code">代码</option>
+                        <option value="design" data-en="Design">设计</option>
+                        <option value="video" data-en="Video">视频</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="adminWorkFile" data-en="File">文件</label>
+                    <input type="file" id="adminWorkFile" accept="image/*,video/*,.zip,.rar">
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="submit-btn" data-en="Submit">提交</button>
+                    <button type="button" class="cancel-btn" onclick="closeAdminSubmitForm()" data-en="Cancel">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 视频模态框 -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal-content">
+            <video controls>
+                <source src="作品/spacex.mp4" type="video/mp4">
+            </video>
+            <button class="close-video" onclick="closeVideoModal()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+</body>
+
+<script src="scripts.js"></script>
+</html> 

@@ -1,0 +1,115 @@
+/* 博客页面样式 */
+.blog-section {
+    max-width: 800px;
+    margin: 100px auto 50px;
+    padding: 0 2rem;
+}
+
+.blog-section h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+/* 年份部分 */
+.year-section {
+    margin-bottom: 4rem;
+}
+
+.year-section h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
+}
+
+/* 月份部分 */
+.month-section {
+    margin-bottom: 3rem;
+}
+
+.month-section h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+/* 博客文章卡片 */
+.blog-post {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* 文章标题和日期 */
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.post-header h4 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+.post-date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* 预览内容 */
+.post-preview {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* 展开按钮 */
+.read-more-btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+    color: #0056b3;
+}
+
+.read-more-btn i {
+    transition: transform 0.3s ease;
+}
+
+/* 完整内容 */
+.post-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    margin-top: 1rem;
+}
+
+.post-content.expanded {
+    max-height: 2000px;
+}
+
+.read-more-btn.expanded i {
+    transform: rotate(180deg);
+} 

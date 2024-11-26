@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>triplexGh的博客</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">triplexGh</div>
+            <div class="nav-controls">
+                <button class="theme-toggle" onclick="toggleTheme()" title="切换主题">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="lang-toggle" onclick="toggleLanguage()" title="切换语言">
+                    <i class="fas fa-book"></i>
+                    <span class="current-lang">中</span>
+                </button>
+                <div class="nav-links">
+                    <a href="index.html" data-en="Home">首页</a>
+                    <a href="blog.html" data-en="Blog">博客</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 博客内容 -->
+    <section class="blog-section">
+        <h1 data-en="My Blog">我的博客</h1>
+        
+        <!-- 2024年 -->
+        <div class="year-section">
+            <h2>2024</h2>
+            <div class="month-section">
+                <h3>三月</h3>
+                <div class="blog-posts">
+                    <article class="blog-post">
+                        <div class="post-header">
+                            <h4>个人网站开发记录</h4>
+                            <span class="post-date">2024-03-20</span>
+                        </div>
+                        <div class="post-preview">
+                            这是一篇关于如何使用 HTML、CSS 和 JavaScript 开发个人网站的技术博客...
+                        </div>
+                        <button class="read-more-btn" onclick="togglePost(this)">
+                            展开阅读 <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="post-content">
+                            <p>完整的博客内容会在这里显示...</p>
+                            <p>可以包含多个段落、代码示例等...</p>
+                        </div>
+                    </article>
+                    
+                    <!-- 更多博客文章 -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <!-- 左侧关于信息 -->
+            <div class="footer-section about-section">
+                <h3 data-en="About triplexGh">关于 triplexGh</h3>
+                <p data-en="Loves technology, focuses on creation, and shares life moments">热爱技术，专注创作，分享生活点滴</p>
+                <p class="school">
+                    <i class="fas fa-university"></i>
+                    <a href="https://www.cuc.edu.cn" target="_blank" class="school-link" data-en="Communication University of China">
+                        Communication University of China
+                    </a>
+                </p>
+            </div>
+            
+            <!-- 右侧联系方式 -->
+            <div class="footer-section contact-section">
+                <h3 data-en="Contact Information">联系方式</h3>
+                <ul>
+                    <li>
+                        <i class="far fa-envelope"></i>
+                        <a href="mailto:triplex.gh@gmail.com" class="contact-link" data-en="triplex.gh@gmail.com">
+                            triplex.gh@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fab fa-weixin"></i>
+                        <a href="weixin://dl/chat?googolhyer" class="contact-link wechat-link" data-en="WeChat: googolhyer">
+                            微信：googolhyer
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fab fa-qq"></i>
+                        <a href="tencent://message/?uin=3374084425" class="contact-link" data-en="QQ: 3374084425">
+                            QQ：3374084425
+                        </a>
+                    </li>
+                    <li><i class="fas fa-map-marker-alt"></i> 中国，北京</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.douyin.com/67949885574" target="_blank" class="social-link" data-en="Douyin">
+                <i class="fab fa-tiktok"></i>
+                <span data-en="Douyin">抖音</span>
+            </a>
+            <a href="https://twitter.com/triplex_gh" target="_blank" class="social-link" data-en="X">
+                <i class="fab fa-x-twitter"></i>
+                <span data-en="X">X</span>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <p data-en="© 2024 triplexGh. All rights reserved.">© 2024 triplexGh. 保留所有权利.</p>
+            <p class="footer-motto" data-en="Innovation • Sharing • Growth">创新 • 分享 • 成长</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script src="blog.js"></script>
+</body>
+</html> 
